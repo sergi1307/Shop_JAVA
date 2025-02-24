@@ -59,4 +59,39 @@ public class Articulo {
     public void setStock(int s) {
         this.stock = s;
     }
+
+    /*Métodos*/
+    public void imprimir() {
+        System.out.println("\nInformación del artículo:");
+        System.out.println("Código: " + this.codigo);
+        System.out.println("Precio: " + this.precio);
+        System.out.println("IVA: " + this.iva);
+        System.out.println("Stock: " + this.stock);
+    }
+
+    public double getPVP() {
+        return (this.precio * (1 +  iva / 100.0));
+    }
+
+    public double getPVPDescuento(double descuento) {
+        return (this.precio / (1 +  descuento / 100.0));
+    }
+
+    public void vender(int ventas) {
+        if (ventas > this.stock) {
+            System.out.println("False");
+        } else {
+            this.stock = this.stock - ventas;
+            System.out.println("True");
+        }
+    }
+
+    public void almacenar(int x) {
+        if (x < 0) {
+            System.out.println("False");
+        } else {
+            this.stock = this.stock + x;
+            System.out.println("True");
+        }
+    }
 }
