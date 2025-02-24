@@ -3,20 +3,23 @@ public class Libros extends Articulo {
     private String codigoAutor;
     private String isbn;
 
-    /*Constructor por defecto*/
+    /*Constructor por defecto
     public Libros() {
         super();
         this.titulo = "";
         this.codigoAutor = "";
         this.isbn = "";
     }
+    */
 
     /*Constructor General*/
     public Libros(String c, double p, int i, int s, String t, String co, String is) {
         super(c, p, i, s);
-        this.titulo = t;
-        this.codigoAutor = co;
-        this.isbn = is;
+        if (t != null && co != null && is != null) {
+            this.titulo = t;
+            this.codigoAutor = co;
+            this.isbn = is;
+        }
     }
 
     /*Getters*/

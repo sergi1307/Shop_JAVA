@@ -4,20 +4,26 @@ public class Articulo {
     private int iva;
     private int stock;
 
-    /*Constructor por defecto con valores asignados por mí*/
+    /*Constructor por defecto con valores asignados por mí
     public Articulo() {
         this.codigo = "";
         this.precio = 0.0;
         this.iva = 0;
         this.stock = 0;
     }
+    */
 
     /*Constructor General con valores dados por el usuario*/
     public Articulo(String c, double p, int i, int s) {
-        this.codigo = c;
-        this.precio = p;
-        this.iva = i;
-        this.stock = s;
+        if (c != null && p > 0.0 && (i == 4 || i == 10 || i == 21) && s > 0) {
+            this.codigo = c;
+            this.precio = p;
+            this.iva = i;
+            this.stock = s;
+            System.out.println("Constructor Creado");
+        } else {
+            System.out.println("Introduzca bien los datos en el constructor.");
+        }
     }
 
     /*Getters de los atributos*/

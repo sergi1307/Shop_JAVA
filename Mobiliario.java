@@ -3,20 +3,23 @@ public class Mobiliario extends Articulo {
     private String codigoFabric;
     private int garantia;
 
-    /*Constructor por defecto*/
+    /*Constructor por defecto
     public Mobiliario() {
         super();
         this.material = "";
         this.codigoFabric = "";
         this.garantia = 0;
     }
+    */
 
     /*Constructor General*/
     public Mobiliario(String codA, double pre, int iva, int stc, String mat, String codF, int gar) {
         super(codA, pre, iva, stc);
-        this.material = mat;
-        this.codigoFabric = codF;
-        this.garantia = gar;
+        if (mat != null && codF != null && gar > 0) {
+            this.material = mat;
+            this.codigoFabric = codF;
+            this.garantia = gar;
+        }
     }
 
     /*Getters*/

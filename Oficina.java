@@ -1,16 +1,19 @@
 public class Oficina extends Articulo {
     private String descripcion;
 
-    /*Constructor por defecto*/
+    /*Constructor por defecto
     public Oficina() {
         super();
         this.descripcion = "";
     }
+    */
 
     /*Constructor General*/
     public Oficina(String codA, double pre, int iva, int stc, String desc) {
         super(codA, pre, iva, stc);
-        this.descripcion = desc;
+        if (desc != null) {
+            this.descripcion = desc;
+        }
     }
 
     /*Getters*/
