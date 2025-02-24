@@ -19,6 +19,9 @@ public class Mobiliario extends Articulo {
             this.material = mat;
             this.codigoFabric = codF;
             this.garantia = gar;
+            System.out.println("Objeto creado");
+        } else {
+            System.out.println("Error: Valores introducidos no válidos");
         }
     }
 

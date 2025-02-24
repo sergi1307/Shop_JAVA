@@ -20,9 +20,9 @@ public class Articulo {
             this.precio = p;
             this.iva = i;
             this.stock = s;
-            System.out.println("Constructor Creado");
+            System.out.println("Objeto creado");
         } else {
-            System.out.println("Introduzca bien los datos en el constructor.");
+            System.out.println("Error: Valores introducidos no válidos");
         }
     }
 

@@ -19,6 +19,9 @@ public class Libros extends Articulo {
             this.titulo = t;
             this.codigoAutor = co;
             this.isbn = is;
+            System.out.println("Objeto creado");
+        } else {
+            System.out.println("Error: Valores introducidos no válidos");
         }
     }
 

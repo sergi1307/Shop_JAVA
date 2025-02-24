@@ -13,6 +13,9 @@ public class Oficina extends Articulo {
         super(codA, pre, iva, stc);
         if (desc != null) {
             this.descripcion = desc;
+            System.out.println("Objeto creado");
+        } else {
+            System.out.println("Error: Valores introducidos no válidos");
         }
     }
 
