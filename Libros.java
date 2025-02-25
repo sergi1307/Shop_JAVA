@@ -50,4 +50,22 @@ public class Libros extends Articulo {
     public void setIsbn(String is) {
         this.isbn = is;
     }
+
+    @Override
+    public void imprimir() {
+        System.out.println("\nInformación del artículo:");
+        System.out.println("Código: " + getCodigo());
+        System.out.println("Precio: " + getPrecio());
+        System.out.println("IVA: " + getIva());
+        System.out.println("Stock: " + getStock());
+        System.out.println("Título: " + this.titulo);
+        System.out.println("Código autor: " + this.codigoAutor);
+        System.out.println("ISBN: " + this.isbn);
+    }
+
+    @Override
+    public String toString() {
+        return "\nInformación del artículo:\nCódigo: " + getCodigo() + "\nPrecio: " + getPrecio() + "\nIVA: " + getIva() + "\nStock: " + getStock()
+                + "\nTítulo: " + this.titulo + "\nCódigo autor: " + this.codigoAutor + "\nISBN: " + this.isbn;
+    }
 }

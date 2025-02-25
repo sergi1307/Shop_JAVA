@@ -77,21 +77,25 @@ public class Articulo {
         return (this.precio / (1 +  descuento / 100.0));
     }
 
-    public void vender(int ventas) {
+    public boolean vender(int ventas) {
         if (ventas > this.stock) {
-            System.out.println("False");
+            return false;
         } else {
             this.stock = this.stock - ventas;
-            System.out.println("True");
+            return true;
         }
     }
 
-    public void almacenar(int x) {
+    public boolean almacenar(int x) {
         if (x < 0) {
-            System.out.println("False");
+            return false;
         } else {
             this.stock = this.stock + x;
-            System.out.println("True");
+            return true;
         }
+    }
+
+    public String toString() {
+        return "\nInformación del artículo:\nCódigo: " + this.codigo + "\nPrecio: " + this.precio + "\nIVA: " + this.iva + "\nStock: " + this.stock;
     }
 }
