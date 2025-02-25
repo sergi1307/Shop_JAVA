@@ -13,7 +13,7 @@ public class Main {
         System.out.println();
         Libros libro1 = new Libros(Leer.leerTexto("Introduzca el código del libro: "),
                                    Leer.leerDouble("Introduzca el precio del libro: "),
-                                   Leer.leerEntero("Introduzca el IVA del libro: "),063
+                                   Leer.leerEntero("Introduzca el IVA del libro: "),
                                    Leer.leerEntero("Introduzca la cantidad en stock: "),
                                    Leer.leerTexto("Introduzca el título del libro: "),
                                    Leer.leerTexto("Introduzca el código de autor: "),
