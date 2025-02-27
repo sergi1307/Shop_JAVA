@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-
+        ArrayList <Articulo> articulos = new ArrayList<>();
         int opc;
 
         do {
@@ -25,8 +25,63 @@ public class Main {
 
             switch (opc) {
                 case 0:
+                    System.out.println("\nSaliendo del programa...");
                     break;
                 case 1:
+                    int dec;
+                    Articulo articulo;
+
+                    System.out.println("\n¿Qué producto quiere dar de alta?");
+                    System.out.println("1. Artículo.");
+                    System.out.println("2. Libro.");
+                    System.out.println("3. Mobiliario.");
+                    System.out.println("4. Oficina.");
+
+                    do {
+                        dec = Leer.leerEntero("Elija una opción: ");
+                    } while (dec < 1 || dec > 4);
+
+                    if (dec == 1) {
+                        articulo = new Articulo(Leer.leerTexto("Introduzca el código del artículo a introducir: "),
+                                Leer.leerDouble("Introduzca el precio del articulo: "),
+                                Leer.leerEntero("Introduzca el IVA del articulo: "),
+                                Leer.leerEntero("Introduzca la cantidad en stock: ")
+                        );
+                        articulos.add(articulo);
+
+                    } else if (dec == 2) {
+                        articulo = new Libros(Leer.leerTexto("Introduzca el código del libro: "),
+                                Leer.leerDouble("Introduzca el precio del libro: "),
+                                Leer.leerEntero("Introduzca el IVA del libro: "),
+                                Leer.leerEntero("Introduzca la cantidad en stock: "),
+                                Leer.leerTexto("Introduzca el título del libro: "),
+                                Leer.leerTexto("Introduzca el código de autor: "),
+                                Leer.leerTexto("Introduzca el ISBN del libro: ")
+                                );
+                        articulos.add(articulo);
+
+                    } else if (dec == 3) {
+                        articulo = new Mobiliario(Leer.leerTexto("Introduzca el código del mobiliario: "),
+                                Leer.leerDouble("Introduzca el precio del mobiliario: "),
+                                Leer.leerEntero("Introduzca el IVA del mobiliario: "),
+                                Leer.leerEntero("Introduzca la cantidad en stock: "),
+                                Leer.leerTexto("Introduzca el material del mobiliario: "),
+                                Leer.leerTexto("Introduzca el código del fabricante: "),
+                                Leer.leerEntero("Introduzca las años de garantía: ")
+                        );
+                        articulos.add(articulo);
+
+                    } else {
+                        articulo = new Oficina(Leer.leerTexto("Introduzca el código del artículo de oficina: "),
+                                Leer.leerDouble("Introduzca el precio del artículo de oficina: "),
+                                Leer.leerEntero("Introduzca el IVA del artículo: "),
+                                Leer.leerEntero("Introduzca la cantidad en stock: "),
+                                Leer.leerTexto("Introduzca la descripción del producto de oficina: ")
+                        );
+                        articulos.add(articulo);
+
+                    }
+
                     break;
                 case 2:
                     break;
@@ -52,7 +107,7 @@ public class Main {
 
         } while (opc != 0);
 
-        Articulo[] articulos = new Articulo[4];
+        /*Articulo[] articulos = new Articulo[4];
         int n;
         double descuento;
 
@@ -179,6 +234,6 @@ public class Main {
             articulos[i].imprimir();
             articulos[i].getPVP();
             articulos[i].getPVPDescuento(descuento);
-        }
+        }*/
     }
 }
