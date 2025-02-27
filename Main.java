@@ -84,6 +84,17 @@ public class Main {
 
                     break;
                 case 2:
+                    String codigo;
+
+                    codigo = Leer.leerTexto("\nIntroduce el código del artículo a dar de baja: ");
+
+                    for (int i = 0; i < articulos.size(); i++) {
+                        if (articulos.get(i).getCodigo().equals(codigo)) {
+                            articulos.remove(i);
+                            System.out.println("\nArtículo encontrado y dado de baja.");
+                            i--;
+                        }
+                    }
                     break;
                 case 3:
                     break;
