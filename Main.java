@@ -1,7 +1,59 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
+
+        int opc;
+
+        do {
+            System.out.println("-".repeat(50));
+            System.out.println("MENÚ");
+            System.out.println("-".repeat(50));
+            System.out.println("1. Alta artículo.");
+            System.out.println("2. Baja artículo.");
+            System.out.println("3. Modificar artículo.");
+            System.out.println("4. Aumentar cantidad de artículo.");
+            System.out.println("5. Vender cantidad de artículo.");
+            System.out.println("6. Ver el PVP del artículo.");
+            System.out.println("7. Ver el PVP con descuento del artículo.");
+            System.out.println("8. Mostrar 1 artículo.");
+            System.out.println("9. Mostrar todos los artículos.");
+            System.out.println("10. Ejecutar código de prueba.");
+            System.out.println("0. Salir");
+
+            opc = Leer.leerEntero("Introduzca que quiere hacer: ");
+
+            switch (opc) {
+                case 0:
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    break;
+                case 8:
+                    break;
+                case 9:
+                    break;
+                case 10:
+                    break;
+                default:
+                    System.out.println("\nError. Número introducido no válido, vuelva a probar.\n");
+            }
+
+        } while (opc != 0);
+
         Articulo[] articulos = new Articulo[4];
-        int n, opc;
+        int n;
         double descuento;
 
         //Declaramos e iniciamos los objetos con sus atributos
