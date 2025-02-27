@@ -28,7 +28,7 @@ public class Main {
                     System.out.println("\nSaliendo del programa...");
                     break;
                 case 1:
-                    int dec;
+                    int decA;
                     Articulo articulo;
 
                     System.out.println("\n¿Qué producto quiere dar de alta?");
@@ -38,10 +38,10 @@ public class Main {
                     System.out.println("4. Oficina.");
 
                     do {
-                        dec = Leer.leerEntero("Elija una opción: ");
-                    } while (dec < 1 || dec > 4);
+                        decA = Leer.leerEntero("Elija una opción: ");
+                    } while (decA < 1 || decA > 4);
 
-                    if (dec == 1) {
+                    if (decA == 1) {
                         articulo = new Articulo(Leer.leerTexto("Introduzca el código del artículo a introducir: "),
                                 Leer.leerDouble("Introduzca el precio del articulo: "),
                                 Leer.leerEntero("Introduzca el IVA del articulo: "),
@@ -49,7 +49,7 @@ public class Main {
                         );
                         articulos.add(articulo);
 
-                    } else if (dec == 2) {
+                    } else if (decA == 2) {
                         articulo = new Libros(Leer.leerTexto("Introduzca el código del libro: "),
                                 Leer.leerDouble("Introduzca el precio del libro: "),
                                 Leer.leerEntero("Introduzca el IVA del libro: "),
@@ -60,7 +60,7 @@ public class Main {
                                 );
                         articulos.add(articulo);
 
-                    } else if (dec == 3) {
+                    } else if (decA == 3) {
                         articulo = new Mobiliario(Leer.leerTexto("Introduzca el código del mobiliario: "),
                                 Leer.leerDouble("Introduzca el precio del mobiliario: "),
                                 Leer.leerEntero("Introduzca el IVA del mobiliario: "),
@@ -97,6 +97,37 @@ public class Main {
                     }
                     break;
                 case 3:
+                    int decM;
+
+                    System.out.println("\n¿Qué producto quiere dar de alta?");
+                    System.out.println("1. Artículo.");
+                    System.out.println("2. Libro.");
+                    System.out.println("3. Mobiliario.");
+                    System.out.println("4. Oficina.");
+
+                    do {
+                        decM = Leer.leerEntero("\nElija un número: ");
+                    } while (decM < 1 || decM > 4);
+
+                    if (decM == 1) {
+                        int decArt;
+
+                        System.out.println("\n¿Que quiere modificar?");
+                        System.out.println("1. Todo.");
+                        System.out.println("2. Código.");
+                        System.out.println("3. Precio.");
+                        System.out.println("4. IVA.");
+                        System.out.println("5. Stock");
+
+                        do {
+                            decArt = Leer.leerEntero("Elija un número: ");
+                        } while (decArt < 1 || decArt > 5);
+
+                        if (decArt == 1) {
+
+                        }
+                    }
+
                     break;
                 case 4:
                     break;
