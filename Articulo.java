@@ -98,4 +98,8 @@ public class Articulo {
     public String toString() {
         return "\nInformación del artículo:\nCódigo: " + this.codigo + "\nPrecio: " + this.precio + "\nIVA: " + this.iva + "\nStock: " + this.stock;
     }
+
+    public void mostrar() {
+        System.out.println(this.codigo);
+    }
 }
